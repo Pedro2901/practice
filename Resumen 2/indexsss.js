@@ -1,3 +1,18 @@
+//tipos de funciones:
+function sumamos(a,b){
+    return a+b;
+}
+console.log(sumamos(2,3));
+
+const sumamos2=function(a,b){
+    return a+b
+}
+console.log(sumamos2(2,3));
+//arrow function 
+
+const sumamos3=(a,b)=>a+b;
+console.log(sumamos3(2,3));
+
 let valor=20
 for(let i=1; i<=10 ;i++){
     
@@ -58,3 +73,49 @@ console.log(paridad(7))
 const comprobacionParidad=(number)=> (number%2==0) ? "Numero par" : (number%2!=0) ? "impar" : "Esa monda que es?"
 
 console.log(comprobacionParidad(2))
+
+function isEven (number) {
+    console.log(number % 2)
+    return number % 2 === 0;
+  }
+  
+  const itsEven = (number) =>  !(number % 2);
+  //Operador Ternario
+  console.log(itsEven(2) ? 'Par' : 'Impar');
+  
+  
+  console.log(isEven(2))
+  console.log(itsEven(2))
+
+  const EsPar = (number) => number % 2 === 0;
+
+console.log(EsPar(2))
+
+function isEven2 (number) {
+    console.log(number % 2 === 0)
+    return number % 2 === 0;
+  }
+  console.log(isEven2(2))
+
+
+  function fizzBuzz (n ) {
+    const vector=[]; 
+    for (let i = 1;i<=n; i++) {
+    if (i%3===0 &&i%5===0) {
+        vector.push("fizzBuzz");
+    } else if (i%3===0){
+        vector.push("fizz");
+    } else if (i%5===0){
+        vector.push("buzz");
+    }else{
+        vector.push(i);
+    }
+    
+    
+    
+  
+    }
+    return vector;
+  }
+
+console.log(fizzBuzz(20))
